@@ -37,8 +37,7 @@ class Router
 
 				$actionName = 'action'.ucfirst(array_shift($segments));
 			
-				echo $actionName;
-
+				
 
 			}
 
