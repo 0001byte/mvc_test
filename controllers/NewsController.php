@@ -9,9 +9,11 @@ class NewsController
 		$newsList = array();
 		$newsList = News::getNewsList();
 
-		echo "<pre>";
+		$newsListPath = ROOT . '/views/news/index.php';
+		include_once($newsListPath);
+		/*echo "<pre>";
 		print_r($newsList);
-		echo "</pre>";
+		echo "</pre>";*/
 
 		return true;
 	}
@@ -19,10 +21,9 @@ class NewsController
 	public function actionView($id){
 
 		$newsItem = News::getNewsItemById($id);
-
-		echo "<pre>";
-		print_r($newsItem);
-		echo "</pre>";
+		
+		$newsItemPath = ROOT . '/views/news/article.php';
+		include_once($newsItemPath);
 
 		return true;
 	}

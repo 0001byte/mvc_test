@@ -15,7 +15,7 @@ class News
 
 		$newsList = array();
 
-		$result = $db->query('SELECT id, title, date, short_content '
+		$result = $db->query('SELECT id, title, date, short_content, content '
 			. 'FROM news '
 			. 'WHERE id = ' . $id);
 
